@@ -1,12 +1,28 @@
 import React from 'react'
 import './styles/Navbar.css'
 import {Link} from 'react-router-dom'
+import{useState, useEffect} from 'react'
 const Navbar = () => {
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 120); // Define como true se a rolagem for maior que 0
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <nav className='navbar'>
+    <nav className={`navbar ${isScrolled ? '' : 'transparent'}`}>
  <div className='navbar-container-left'>
  
      <img className='logo' src="/max.png" alt="logo" />
+    
 </div>
 
     <div className='navbar-container-center'>

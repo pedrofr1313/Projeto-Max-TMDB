@@ -1,0 +1,23 @@
+/* MovieCard.css */
+.img{
+  width: 100%;
+  height:20vw;
+  transition: transform 0.3s ease-in-out; 
+}
+.movie-card{
+  width: calc((100% - 40px) / 5);
+    height:auto;
+     justify-content: center; 
+    
+     text-align: center;
+     overflow: hidden;
+     margin: 0;
+     padding: 0;
+     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+}
+.movie-card:hover {
+  /* Efeito de brilho na borda */
+  box-shadow: 0 0 1px 3px rgba(255, 255, 255, 0.7); /* Ajuste a cor e intensidade do brilho */
+  /* transform: scale(1.05);  */
+}

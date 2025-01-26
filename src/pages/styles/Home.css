@@ -1,4 +1,23 @@
 .home{
+    display: flex;
+    grid-template-columns: 1fr; /* Uma coluna para controle simples */
+    grid-template-rows: auto auto; /* Linhas ajustáveis automaticamente */
+    width: 100%; /* Garante que o grid ocupe toda a largura do viewport */
+    justify-content: center;
+    background-color: black;
+}
+.body{
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em uma coluna (um embaixo do outro) */
+    align-items: center;    /* Centraliza os elementos horizontalmente */
+    gap: 20px; 
+    background-color: rgb(0, 0, 0); 
+}
+.card-carousel{
+    /* background-color: black; */
     width: 100%;
-    background-color: aqua;
+}
+.titulo{
+    color: white;
+    margin-left: 8%;
 }
