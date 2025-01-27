@@ -51,6 +51,7 @@ const CardCarousel = ({filtro,titulo, sliderId}) => {
     <div id={sliderId} className='swiper'>
        <div className='titulo'>
             <h5>{titulo}</h5>
+
        </div> 
     <div className="card-wrapper">
     <div className='container swiper-wrapper'>
@@ -63,6 +64,7 @@ const CardCarousel = ({filtro,titulo, sliderId}) => {
       id={movie.id}
       image={movie.poster_path}
       cont={++cont} // Incrementa e passa o valor atualizado
+      filtro={filtro==="movie/top_rated" ? 'movie/' : 'tv/'}
     />
   ));
 })())}

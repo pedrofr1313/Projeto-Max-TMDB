@@ -39,12 +39,12 @@ console.log(topMovies)
    
     <CardCarousel
           filtro={filtroTopMovies}
-          titulo="Filmes mais bem avaliados"
+          titulo="Top rated movies"
           sliderId="slider-filmes"
         />
         <CardCarousel
           filtro={filtroTopTv}
-          titulo="Programas de TV mais bem avaliados"
+          titulo="Top rated TV shows"
           sliderId="slider-series"
         />
     </div>

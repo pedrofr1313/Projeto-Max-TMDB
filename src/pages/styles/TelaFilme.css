@@ -1,0 +1,16 @@
+.imagem{
+    width: 100vw;
+   
+}
+.image-container{
+   display: inline-block;
+   position: relative;
+
+}
+.image-title{
+    position: absolute;
+    top:70%;
+    left: 5%;
+    color: rgb(255, 255, 255);
+      
+}

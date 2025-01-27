@@ -3,6 +3,7 @@ import { useState } from 'react'
 import NavBar from './components/Navbar'
 import Home from './pages/Home'
 import Filme from './pages/Filme'
+import TelaFilme from './pages/TelaFilme'
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -18,6 +19,7 @@ function App() {
       <Route element={<App/>}/>
       <Route path="/" element={<Home />} />
       <Route path="/Filmes" element={<Filme/>}/>
+      <Route path="/movie/:id" element={<TelaFilme/>}/>
       
       
     </Routes>
