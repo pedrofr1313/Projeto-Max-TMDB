@@ -34,21 +34,56 @@ const TelaFilme = () => {
   console.log(Movie)
   
  return (
-      <body className='body'>
+  <body>
+      <div className='div'>
          <div className="image-container">
          <img className='imagem' src={Movie && imageurl+Movie.backdrop_path} alt="" ></img>
-         {Movie &&<h1 className="image-title">{( filtro==='tv/')? Movie.name : Movie.title} <br /><button type="button" class="btn btn-outline-light"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+         {Movie &&<h1 className="image-title">{( filtro==='tv/')? Movie.name : Movie.title}</h1>}
+{Movie&& <p className='image-p'>{Movie.tagline} <br /> <br /><button type="button" class="btn btn-outline-light"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-</svg> Add to watchlist</button></h1>}
-          
+</svg> Add to watchlist</button>
+  </p>}
           </div>
-          <h1>Descrição</h1>
+          <div className="containe">
+
+          <div className='info'>
+            <h5 className='ti'>Description</h5>
+          <p className='descricao'>{Movie && Movie.overview}</p>
+          </div>
+
+           <div className='more-info'>
+           <p className='paragrafo-generos'>
+      <strong>Genres:</strong> {Movie && Movie.genres && Movie.genres.map((genre, index) => (
+        `${genre.name}${index < Movie.genres.length - 1 ? ', ' : ''}`
+      ))}
+
+    </p>
+    <p className='paragrafo-generos'>
+      <strong>Country:</strong> {Movie && Movie.origin_country && Movie.origin_country .map((country, index) => (
+        `${country}${index < Movie.origin_country.length - 1 ? ', ' : ''}`
+      ))}
+      
+    </p>
+    <p className='paragrafo-pc'>
+      <strong>Production companies:</strong> {Movie && Movie.production_companies && Movie.production_companies .map((pc, index) => (
+        `${pc.name}${index < Movie.production_companies.length - 1 ? ', ' : ''}`
+      ))}
+      
+    </p>
+
+           </div>
+
+          </div>
+          
+        
      
       
-      </body>
+      </div>
          
-     
+   
+      
+     </body>
       
     )
 }

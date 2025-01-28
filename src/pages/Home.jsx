@@ -8,7 +8,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 const Home = () => {
 
   const filtroTopMovies ='movie/top_rated'
-  const filtroTopTv = 'tv/top_rated'
+  const filtroTopTv = 'movie/now_playing'
 const [topMovies, setTopMovies] = useState([]);
 const getTopratedMovies =async (url) =>
 {
@@ -31,7 +31,7 @@ console.log(topMovies)
   return (
     <body className='body'>
        <div className="Home">
-        <Carousel dados={topMovies}/>
+        <Carousel dados={topMovies} tipo="Movie"/>
         
         </div>
         
@@ -44,7 +44,7 @@ console.log(topMovies)
         />
         <CardCarousel
           filtro={filtroTopTv}
-          titulo="Top rated TV shows"
+          titulo="Currently on theatres"
           sliderId="slider-series"
         />
     </div>

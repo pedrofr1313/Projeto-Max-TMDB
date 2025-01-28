@@ -27,7 +27,7 @@ const Navbar = () => {
 
     <div className='navbar-container-center'>
     <h5><Link to="/" href="#" class="link-light link-opacity-75 link-opacity-100-hover link-offset-8 link-underline-opacity-0 link-underline-opacity-100-hover">Home</Link></h5>
-    <h5><Link href="#" class="link-light link-opacity-75 link-opacity-100-hover link-offset-8 link-underline-opacity-0 link-underline-opacity-100-hover">TV Shows</Link></h5>
+    <h5><Link to="/TvShows"href="#" class="link-light link-opacity-75 link-opacity-100-hover link-offset-8 link-underline-opacity-0 link-underline-opacity-100-hover">TV Shows</Link></h5>
     <h5><Link to="/Filmes" href="#" class="link-light link-opacity-75 link-opacity-100-hover link-offset-8 link-underline-opacity-0 link-underline-opacity-100-hover">Movies</Link></h5>
     <h5><Link href="#" class="link-light link-opacity-75 link-opacity-100-hover link-offset-8 link-underline-opacity-0 link-underline-opacity-100-hover">Children & Family</Link></h5>
     </div>
