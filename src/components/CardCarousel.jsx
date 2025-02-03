@@ -63,7 +63,7 @@ const CardCarousel = ({filtro,titulo, sliderId}) => {
       key={movie.id}
       id={movie.id}
       image={movie.poster_path}
-      cont={++cont} // Incrementa e passa o valor atualizado
+      // Incrementa e passa o valor atualizado
       filtro={filtro==="movie/top_rated" || filtro==="movie/upcoming" || filtro==="movie/popular" || filtro ==="movie/now_playing"? 'movie/' : 'tv/'}
     />
   ));

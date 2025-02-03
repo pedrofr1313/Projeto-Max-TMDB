@@ -2,7 +2,7 @@ import React from 'react'
 import './styles/MovieCard.css'
 import {Link} from 'react-router-dom'
 
-const MovieCard = ({id,image,cont,filtro}) => {
+const MovieCard = ({id,image,filtro}) => {
 
     const imageurl = import.meta.env.VITE_IMG;
   return (

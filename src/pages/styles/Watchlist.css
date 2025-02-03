@@ -1,0 +1,28 @@
+.container-watchlist{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    padding-left: 14vw;
+    margin-top: 0;
+    padding-top: 0;
+    
+}
+.container-titulo h2{
+    color: aliceblue;
+}
+.container-titulo{
+    width: 72%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: start;
+  
+    padding-bottom: 0;
+    margin-bottom: 0;
+    align-items: baseline;
+    padding-bottom: 5px; /* Espaço entre o texto e a linha */
+    border-bottom: 2px solid aliceblue;
+}
+   

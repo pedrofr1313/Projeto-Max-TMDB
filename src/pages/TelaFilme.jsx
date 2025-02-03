@@ -8,12 +8,20 @@ import { useParams, useLocation } from 'react-router-dom';
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 const imageurl = import.meta.env.VITE_IMG;
+import usePost from '../hooks/usePost';
+import useDelete from '../hooks/useDelete'
+import useGetByCodigo from '../hooks/useGetByCodigo'
 const TelaFilme = () => {
     const { id } = useParams();
     const location =useLocation();
+    const { postResponse, error, loading, postData } = usePost('http://localhost:8080/filme');
+    const { response: deleteResponse, error: deleteError, loading: deleteLoading, deleteData } = useDelete('http://localhost:8080/filme');
+    const { data: filme, errorGet, loadingGet, getData } = useGetByCodigo("http://localhost:8080/filme");
 
+    const [isInWatchlist, setIsInWatchlist] = useState(false);
     const filtro = location.state?.filtro;
   const [Movie, setMovie] = useState(null);
+  
   const getMovie =async (url) =>
   {
       const res = await fetch(url);
@@ -21,15 +29,68 @@ const TelaFilme = () => {
   
       console.log(data);
       setMovie(data);
+    
+ 
+
+      
   }
+
+
+  const handleAddToWatchlist = (e) => {
+    e.preventDefault();
+    console.log("Dados enviados para post:", filmeData);
+    postData(filmeData);
+   
+  };
+
+  useEffect(() => {
+    if (postResponse !== null) {
+      console.log("Resposta do POST:", postResponse);
+      setIsInWatchlist(true); 
+      console.log(postResponse)// Atualiza a UI quando o postResponse muda
+    }
+  }, [postResponse]);
   
+  useEffect(() => {
+    if (deleteResponse !== null) {
+      console.log("Resposta do POST:", deleteResponse);
+      setIsInWatchlist(false); 
+      console.log(deleteResponse)// Atualiza a UI quando o postResponse muda
+    }
+  }, [deleteResponse]);
+
+ 
+  
+  const handleRemoveFromWatchlist = (e) => {
+    e.preventDefault();
+     deleteData(id);
+  };
+
+  console.log(filtro)
+  const filmeData = {
+    poster_path: Movie?.poster_path || "",
+    codigo: Movie?.id || 0, 
+    efilme: filtro==='movie/' ? true : false 
+  };
   useEffect(() =>
   {
   const Url = `${moviesURL}${filtro}${id}?${apiKey}`
   console.log(Url)
   getMovie(Url);
-  
+  getData(id);
+ 
+
   },[])
+
+  useEffect(() =>
+  {
+    if (filme && filme.id!=null) {
+      setIsInWatchlist(true);
+    } else {
+      setIsInWatchlist(false);
+    }
+  }
+  ,[filme])
   
   console.log(Movie)
   
@@ -39,10 +100,24 @@ const TelaFilme = () => {
          <div className="image-container">
          <img className='imagem' src={Movie && imageurl+Movie.backdrop_path} alt="" ></img>
          {Movie &&<h1 className="image-title">{( filtro==='tv/')? Movie.name : Movie.title}</h1>}
-{Movie&& <p className='image-p'>{Movie.tagline} <br /> <br /><button type="button" class="btn btn-outline-light"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-</svg> Add to watchlist</button>
+{Movie&& <p className='image-p'>{Movie.tagline} <br /> <br />
+
+{isInWatchlist ? (
+              <button type="button" onClick={handleRemoveFromWatchlist} className="btn btn-danger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trash" viewBox="0 0 16 16">
+                  <path d="M5.5 5.5A.5.5 0 0 1 6 5h4a.5.5 0 0 1 .5.5V6h1v-.5A1.5 1.5 0 0 0 10 4H6A1.5 1.5 0 0 0 4.5 5.5V6h1v-.5z" />
+                  <path d="M14 6h-1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6H2v7a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V6z" />
+                  <path d="M5.5 10.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5V12H5v-1.5z" />
+                </svg> Remove from watchlist
+              </button>
+            ) : (
+              <button type="button" onClick={handleAddToWatchlist} className="btn btn-outline-light">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                </svg> Add to watchlist
+              </button>
+            )}
   </p>}
           </div>
           <div className="containe">
