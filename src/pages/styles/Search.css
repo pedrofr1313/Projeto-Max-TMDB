@@ -1,0 +1,55 @@
+.container-search{
+width: 100vw;
+display: flex;
+justify-content: center;
+margin-top: 6% ;
+
+}
+.searchBar{
+border: 2px solid #454763;
+border-radius: 5px; /* Raio da borda arredondada */
+padding: 10px; /* Espaçamento interno */
+width: 80%; /* Largura do formulário */
+background-color: #454763;
+padding-left: 3%;
+color: #ffffff;
+height: 5vw;
+font-size: 2vw;
+
+}
+.form-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+input::placeholder {
+    color: #ffffff; /* Cor do placeholder */
+    font-size: 2vw;
+    opacity: 1; /* Garante que a cor fique visível */
+  }
+  .searchBar:hover{
+    box-shadow: 0 0 2px 2px #ffffff; 
+
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 11%; /* Ajuste a posição do ícone */
+    color: #fffafa; /* Cor do ícone */
+  }
+  .cards-container{
+ width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+  margin-top: 7% 
+  } 
+  

@@ -77,3 +77,8 @@
     text-align: right;
     color: rgb(145, 145, 143);
 }
+.paragrafo-date{
+    color: rgb(145, 145, 143);
+    text-align: right;
+    width: 100%;
+}

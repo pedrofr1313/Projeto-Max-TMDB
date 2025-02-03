@@ -104,11 +104,10 @@ const TelaFilme = () => {
 
 {isInWatchlist ? (
               <button type="button" onClick={handleRemoveFromWatchlist} className="btn btn-danger">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trash" viewBox="0 0 16 16">
-                  <path d="M5.5 5.5A.5.5 0 0 1 6 5h4a.5.5 0 0 1 .5.5V6h1v-.5A1.5 1.5 0 0 0 10 4H6A1.5 1.5 0 0 0 4.5 5.5V6h1v-.5z" />
-                  <path d="M14 6h-1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6H2v7a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V6z" />
-                  <path d="M5.5 10.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5V12H5v-1.5z" />
-                </svg> Remove from watchlist
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+</svg> Remove from watchlist
               </button>
             ) : (
               <button type="button" onClick={handleAddToWatchlist} className="btn btn-outline-light">
@@ -140,12 +139,17 @@ const TelaFilme = () => {
       ))}
       
     </p>
+    {Movie &&<p className='paragrafo-date'>
+      <strong>Release date:</strong> { filtro=="tv/" ? Movie.first_air_date : Movie.release_date}
+      
+    </p>}
     <p className='paragrafo-pc'>
       <strong>Production companies:</strong> {Movie && Movie.production_companies && Movie.production_companies .map((pc, index) => (
         `${pc.name}${index < Movie.production_companies.length - 1 ? ', ' : ''}`
       ))}
       
     </p>
+   
 
            </div>
 

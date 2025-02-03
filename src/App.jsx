@@ -6,6 +6,7 @@ import Filme from './pages/Filme'
 import TelaFilme from './pages/TelaFilme'
 import TvShows from './pages/TvShows'
 import Watchlist from './pages/Watchlist'
+import Search from './pages/Search'
 import './App.css';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -25,6 +26,7 @@ function App() {
       <Route path='/TvShows' element={<TvShows/>} />
       <Route path="/movie/:id" element={<TelaFilme/>}/>
       <Route path="/watchList" element={<Watchlist/>}/>
+      <Route path="/search" element={<Search/>}/>
       
       
     </Routes>
