@@ -16,7 +16,7 @@ A plataforma permite que os usuários pesquisem filmes, gerenciem uma watchlist 
 - **Front-end:** React.js, Bootstrap(CSS) 
 - **Back-end:** Java Spring Boot  
 - **Banco de Dados:** **MySQL**  
-- **Comunicação entre front e back:** API **RESTful**  
+- **Comunicação entre front e back:** API **REST**  
 - **Hospedagem:**  
   - Back-end: **Railway**  
   - Front-end: **Render**  
