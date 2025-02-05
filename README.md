@@ -22,5 +22,5 @@ A plataforma permite que os usuários pesquisem filmes, gerenciem uma watchlist 
   - Front-end: **Render**  
 
 🔗 **Acesse o projeto**: [Projeto MAX com TMDB](https://projeto-max-tmdb.onrender.com/)  
-**Acesse o repositório da API Rest**: [Repositório java Spring Boot](https://github.com/pedrofr1313/API-Rest-Projeto-MAX-TMDB)
+🔗**Acesse o repositório da API Rest**: [Repositório java Spring Boot](https://github.com/pedrofr1313/API-Rest-Projeto-MAX-TMDB)
 
