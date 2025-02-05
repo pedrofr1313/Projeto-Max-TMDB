@@ -59,7 +59,6 @@ const TelaFilme = () => {
     }
   }, [deleteResponse]);
 
- 
   
   const handleRemoveFromWatchlist = (e) => {
     e.preventDefault();
@@ -84,8 +83,9 @@ const TelaFilme = () => {
 
   useEffect(() =>
   {
-    if (filme && filme.id!=null) {
+    if (filme && filme.id>0) {
       setIsInWatchlist(true);
+      console.log("Filme esta na watchList!")
     } else {
       setIsInWatchlist(false);
     }
