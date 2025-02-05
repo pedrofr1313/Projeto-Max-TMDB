@@ -1,5 +1,25 @@
-## Projeto MAX com TMDB
+# Projeto MAX com TMDB  
 
-O projeto MAX com TMDB tem o objetivo de reproduzir a interface do servico de streaming MAX, da hbo. Desenvolvido pelo estudante de engenharia de software e desenvolvedor FullStack Pedro Franco 
-com o uso das tecnologias React.js e Java Spring Boot, esta aplicação possibilita que o usuário pesquise por filmes, gerencie uma watchlist e navegue por uma interface próxima à da plataforma original. 
-Todos os dados sao fornecidos pela API de filmes The Movie DB, database que acumula informações sobre filmes, séries e documentários desde 2008. 
+O Projeto MAX com TMDB tem como objetivo recriar a interface do serviço de streaming MAX, da HBO. Desenvolvido pelo estudante de Engenharia de Software e desenvolvedor Full Stack Pedro Franco, a aplicação foi construída utilizando React.js no front-end e Java Spring Boot no back-end.
+
+A plataforma permite que os usuários pesquisem filmes, gerenciem uma watchlist e naveguem por uma interface inspirada na experiência original da MAX. Todos os dados são fornecidos pela API The Movie Database (TMDB), um extenso banco de dados que reúne informações sobre filmes, séries e documentários desde 2008.  
+
+## Funcionalidades  
+
+- **Pesquisa de filmes** com base nos dados fornecidos pela API **The Movie Database (TMDB)**  
+- **Watchlist personalizada**, permitindo que os usuários salvem seus títulos favoritos  
+- **Navegação por categorias** como **Filmes Populares, Melhores Avaliados, No Ar e Em Breve nos Cinemas**  
+
+
+## Aspectos Técnicos  
+
+- **Front-end:** React.js, Bootstrap(CSS) 
+- **Back-end:** Java Spring Boot  
+- **Banco de Dados:** **MySQL**  
+- **Comunicação entre front e back:** API **RESTful**  
+- **Hospedagem:**  
+  - Back-end: **Railway**  
+  - Front-end: **Render**  
+
+🔗 **Acesse o projeto**: [Projeto MAX com TMDB](https://projeto-max-tmdb.onrender.com/)  
+
