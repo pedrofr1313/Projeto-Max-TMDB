@@ -21,6 +21,7 @@ const getTopratedMovies =async (url) =>
 
 useEffect(() =>
 {
+  console.log(apiKey)
 const Url = `${moviesURL}movie/popular?${apiKey}`
 getTopratedMovies(Url);
 

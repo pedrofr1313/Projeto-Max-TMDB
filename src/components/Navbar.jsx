@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? '' : 'transparent'}`}>
  <div className='navbar-container-left'>
  
-     <img className='logo' src="public/max.png" alt="logo" />
+     <img className='logo' src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5fbef0ad-821e-42ff-bd50-c54a0742abc7/dfudrq1-f161a753-d067-4c18-84f6-ca87785a41fe.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzVmYmVmMGFkLTgyMWUtNDJmZi1iZDUwLWM1NGEwNzQyYWJjN1wvZGZ1ZHJxMS1mMTYxYTc1My1kMDY3LTRjMTgtODRmNi1jYTg3Nzg1YTQxZmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6vm5FkCJYrsG9Qh3xfbV0LMEi43AbT5cqqJinwJSLZM" alt="logo" />
     
 </div>
 
