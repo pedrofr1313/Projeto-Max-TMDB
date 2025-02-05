@@ -14,9 +14,9 @@ import useGetByCodigo from '../hooks/useGetByCodigo'
 const TelaFilme = () => {
     const { id } = useParams();
     const location =useLocation();
-    const { postResponse, error, loading, postData } = usePost('http://localhost:8080/filme');
-    const { response: deleteResponse, error: deleteError, loading: deleteLoading, deleteData } = useDelete('http://localhost:8080/filme');
-    const { data: filme, errorGet, loadingGet, getData } = useGetByCodigo("http://localhost:8080/filme");
+    const { postResponse, error, loading, postData } = usePost('https://exciting-recreation-production.up.railway.app/filme');
+    const { response: deleteResponse, error: deleteError, loading: deleteLoading, deleteData } = useDelete('https://exciting-recreation-production.up.railway.app/filme');
+    const { data: filme, errorGet, loadingGet, getData } = useGetByCodigo("https://exciting-recreation-production.up.railway.app/filme");
 
     const [isInWatchlist, setIsInWatchlist] = useState(false);
     const filtro = location.state?.filtro;

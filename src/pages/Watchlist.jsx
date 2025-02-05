@@ -5,7 +5,7 @@ import MovieCard from '../components/MovieCard';
 import { useState, useEffect } from 'react';
 const Watchlist = () => {
  
-  const {data, error, loading, getAll} = useGetAll("http://localhost:8080/filme")
+  const {data, error, loading, getAll} = useGetAll("https://exciting-recreation-production.up.railway.app/filme")
   const [watchlist, setWatchlist] = useState([])
   useEffect(() => {
   getAll()

@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? '' : 'transparent'}`}>
  <div className='navbar-container-left'>
  
-     <img className='logo' src="/max.png" alt="logo" />
+     <img className='logo' src="public/max.png" alt="logo" />
     
 </div>
 
